@@ -1,95 +1,98 @@
-/* 1. Global Reset & Font */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600&family=Noto+Serif+KR:wght@400;600&display=swap');
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KimIntelligence | EDITORIAL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="KimIntelligence Logo">
+        </div>
+        <nav>
+            <a href="index.html">ABOUT & CONTACT</a>
+            <a href="music.html">MUSIC</a>
+            <a href="editorial.html" class="active">EDITORIAL & PRESS</a>
+            <a href="live.html">LIVE PROJECT</a>
+        </nav>
+    </header>
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+    <main class="container">
+        <h2 class="section-title">Editorial & Press</h2>
+        <div class="grid">
+            <div class="card" onclick="openModal('modal-13')">
+                <img src="images/book_13indies.jpg" alt="13인의 인디사람들">
+                <div class="card-info">
+                    <h3>13인의 인디사람들</h3>
+                    <p>에세이집 (2023)</p>
+                </div>
+            </div>
 
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #1a1a1a;
-    background-color: #fff;
-    line-height: 1.7;
-    word-break: keep-all; 
-    scroll-behavior: smooth;
-    /* Apple / Tate Modern Style 적용 */
-    letter-spacing: 0.5px; /* 폰트 자간 확장 */
-}
+            <div class="card" onclick="openModal('modal-novel')">
+                <img src="images/book_holo.jpg" alt="홀로 남은 소설">
+                <div class="card-info">
+                    <h3>홀로 남은 (소설)</h3>
+                    <p>장편소설 (2025)</p>
+                </div>
+            </div>
 
-a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
-a:hover { opacity: 0.6; }
-ul { list-style: none; }
-img { max-width: 100%; display: block; }
+            <div class="card" onclick="openModal('modal-atom')">
+                <img src="images/book_atom.jpg" alt="아톰뮤직하트 작업기">
+                <div class="card-info">
+                    <h3>아톰뮤직하트 3집 작업기</h3>
+                    <p>인터뷰 및 기록집 (2023)</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-/* 2. Brand Header (로고 & 메뉴) */
-header {
-    padding: 60px 5% 30px; /* 상하 여백 대폭 증가 (Tate Modern) */
-    background-color: #fff;
-    border-bottom: 1px solid rgba(0,0,0,0.05); 
-    text-align: center;
-}
+    <div id="modal-13" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-13')">×</span>
+            <h2>13인의 인디사람들</h2>
+            <img src="images/book_13indies.jpg" class="modal-img">
+            <div class="modal-text">
+                <p>서울문화재단의 지원을 받아 진행된 프로젝트로 인디 밴드 구성원 13명의 에세이를 모아 만들어진 에세이집입니다.</p>
+                <p>다양한 장르의 뮤지션을 섭외했으며 뮤지션뿐만 아니라 공간 운영자와 엔지니어의 이야기도 담고자 했습니다. 기존 인디씬 팬에게는 선물로, 인디씬에 관심이 없던 이들에겐 입문서로 다가갈 수 있는 책입니다.</p>
+                <a href="https://gongsangondo.shop/product/3차재입고-13인의-인디사람들-the-thirteen-indies-김지성외-13인-음악-에세이/2120/category/58/display/1/" target="_blank" class="btn">Book Info / Buy</a>
+            </div>
+        </div>
+    </div>
 
-.logo-area {
-    margin-bottom: 30px;
-}
+    <div id="modal-novel" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-novel')">×</span>
+            <h2>소설 <홀로 남은></h2>
+            <img src="images/book_holo.jpg" class="modal-img">
+            <div class="modal-text">
+                <p><strong>[소개]</strong></p>
+                <p>"<홀로 남은>은 세상의 거짓과 냉소 속에서도 진심을 지키고 소리내는 사람들의 고독한 자리를 뜻한다. 우리가 서로의 부족함을 받아들이지 못한 채 불신과 혐오로 갈라지는 시대, 집단지성은 그 속에서 '그래도 사랑할 수 있을까'를 묻는다. <홀로 남은>은 가장 인간답게 사랑을 외치고 있는 것이다." - 공상온도 대표 함현희</p>
+                <p><strong>[줄거리]</strong></p>
+                <p>주인공 ‘심훈’은 방황하던 음악 청년으로, 무대에서 처음 만난 인물 ‘재림’에게 강하게 이끌리며 밴드를 함께 꾸리게 된다... (중략: 제공해주신 줄거리 전체) ...결국 이 소설은 선의와 진실이 현대 사회에서 어떻게 오해되고 소멸하는가, 그리고 그럼에도 불구하고 그것이 남긴 흔적이 어떻게 또 다른 삶을 시작하게 하는가를 보여준다.</p>
+                <p>집단지성의 동명의 앨범 <홀로 남은>의 서사를 확장한 소설로 음원과 소설을 함께 감상하시는 것을 권합니다.</p>
+                <a href="https://gongsangondo.shop/" target="_blank" class="btn">Book Info / Buy</a>
+            </div>
+        </div>
+    </div>
 
-.logo-area img {
-    height: 60px; 
-    width: auto;
-    object-fit: contain;
-    margin: 0 auto;
-}
+    <div id="modal-atom" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-atom')">×</span>
+            <h2>아톰뮤직하트 3집 작업기</h2>
+            <img src="images/book_atom.jpg" class="modal-img">
+            <div class="modal-text">
+                <p>정규 3집 발매를 앞둔 밴드에서 작업기를 책으로 남기고 싶다는 제안을 받으며 처음으로 ‘편집자’의 역할을 제대로 경험했습니다.</p>
+                <p>클라이언트의 의도를 읽고, 뮤지션의 언어를 독자의 언어로 바꿔 구조를 만드는 작업은 에세이집 때와는 전혀 다른 종류의 역량을 요구했습니다. 이 과정에서 저는 작가의 말과 독자의 호흡 사이에서 균형을 잡는 일이 편집이라는 사실을 배웠고, 책 한 권의 형태를 만들기 위해 어떤 조율이 필요한지 몸으로 익혔습니다.</p>
+            </div>
+        </div>
+    </div>
 
-header h1 {
-    display: none; /* 로고 이미지로 대체되었으므로 숨김 */
-}
-
-/* 3. Navigation */
-nav { margin-top: 0; }
-
-.nav-container { display: flex; justify-content: center; }
-
-.menu { display: flex; gap: 50px; /* 메뉴 간격 넓게 (Tate Modern) */ }
-
-nav a {
-    font-family: 'Noto Sans KR', sans-serif; /* 메뉴는 고딕으로 깔끔하게 */
-    font-size: 0.95rem;
-    color: #333;
-    padding: 5px 0;
-    transition: all 0.3s;
-    /* Apple Style: 밑줄 제거 */
-    border-bottom: none !important; 
-}
-
-nav a:hover, nav a.active {
-    color: #000;
-    opacity: 0.8;
-}
-
-/* 4. Layout & Section Titles */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 80px 5%; /* 섹션 상하 여백 충분히 확보 */
-}
-
-.section-title {
-    font-family: 'Noto Serif KR', serif; /* 명조체로 제목의 무게감 부여 */
-    font-size: 2.2rem;
-    margin-bottom: 60px;
-    text-align: center;
-    letter-spacing: 1px; /* 자간 확장 */
-}
-
-/* (이하 스타일은 이전과 동일하게 유지됩니다.) */
-
-/* 5. Footer & Shared Styles */
-/* ... (Contact 및 Footer 스타일 유지) ... */
-
-/* 6. Modal Style (유지) */
-/* ... (Modal 관련 스타일 유지) ... */
-
-@media (max-width: 768px) {
-    .container { padding: 40px 5%; }
-    header { padding: 40px 5% 20px; }
-    .menu { gap: 20px; }
-    .grid { grid-template-columns: 1fr; } 
-}
+    <footer>© 2025 KimIntelligence. All rights reserved.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
