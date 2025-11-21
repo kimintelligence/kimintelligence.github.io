@@ -3,66 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KimIntelligence | ABOUT</title>
+    <title>KimIntelligence | LIVE</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <div class="logo-area">
             <img src="images/logo.png" alt="KimIntelligence Logo">
         </div>
         <nav>
-            <a href="index.html" class="active">ABOUT & CONTACT</a>
+            <a href="index.html">ABOUT & CONTACT</a>
             <a href="music.html">MUSIC</a>
             <a href="editorial.html">EDITORIAL & PRESS</a>
-            <a href="live.html">LIVE PROJECT</a>
+            <a href="live.html" class="active">LIVE PROJECT</a>
         </nav>
     </header>
 
     <main class="container">
-        <section class="about-text">
-            <p class="main-narrative">
-                김지성 (KimIntelligence)은 음악과 텍스트 등 다양한 매체로 세계를 이해하고 기록하고자 합니다.
-            </p>
-            <p>
-                그의 원맨밴드 프로젝트 <strong>‘집단지성’</strong>을 통해 특정한 음악적 스타일을 고수하기보다는, 다양한 장르를 자신의 방식으로 재해석하여 각 곡들이 유기적인 흐름을 지닌 하나의 스토리로 만드는 것에 집중하고 있습니다. 그 이야기들은 냉소적으로 보일 수 있지만, 그 바탕에는 언제나 휴머니즘에 대한 믿음이 깔려 있습니다. 이 냉소는 단순한 비판을 넘어서, 인간 본질과 사회적 모순을 조명하고, 이를 통해 더 나은 세상에 대한 희망과 이해를 전달하고자 합니다.
-            </p>
-            <p>
-                2023년 1인 출판사 <strong>'인텔리(Intelli)'</strong>를 설립하여 <13인의 인디사람들>을 기획하고 발간했습니다. 이후 집단지성의 2집인 <홀로 남은> 프로젝트에서는 앨범의 서사를 소설로 확장하며, 음악만으로 담을 수 없는 심리적 깊이를 텍스트로 완성하는 통합적 방법론을 확립했습니다.
-            </p>
-            <p>
-                또한, '아톰뮤직하트 3집 작업기' 편집과 <인간궁상>, <Cool as Folk> 등의 공연 기획 이력을 통해, 콘텐츠를 구조화하고 공간을 설계하는 기획자이자 편집자로서의 경험도 갖추고 있습니다.
-            </p>
-        </section>
-        
-        <section class="contact-info">
-            <div class="info-grid">
-                <div class="info-item">
-                    <h3>Profile Details</h3>
-                    <p><strong>김지성 (Kim Ji-sung)</strong></p>
-                    <p><strong>Education:</strong> 연세대학교 철학과 졸업 예정 (2026. 02.)</p>
-                    <p><strong>Publisher:</strong> 1인 출판사 '인텔리 (Intelli)' 설립 (2023. 06.)</p>
-                </div>
-                <div class="info-item">
-                    <h3>Contact & Links</h3>
-                    <p><a href="mailto:dave8855@naver.com" class="underline-link">E-mail: dave8855@naver.com</a></p>
-                    <p>Phone: 010-8355-6662</p>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/kim_intelligence/" target="_blank">Instagram</a>
-                        <a href="https://www.youtube.com/@KimIntelligence" target="_blank">Youtube</a>
-                        <a href="https://open.spotify.com/album/1WTPDC0SKn7pz9mxQwTcra?si=SzFCTq0jRJKJQbdqI2ZIvw" target="_blank">Spotify</a>
-                    </div>
+        <h2 class="section-title">Live Projects</h2>
+        <div class="grid">
+            <div class="card" onclick="openModal('modal-human')">
+                <img src="images/poster_human.png" alt="인간궁상 포스터">
+                <div class="card-info">
+                    <h3>인간궁상 (Human Gungsang)</h3>
+                    <p>공연 기획 (2025.11)</p>
                 </div>
             </div>
-        </section>
+
+            <div class="card" onclick="openModal('modal-cool')">
+                <img src="images/poster_cool.png" alt="Cool as Folk 포스터">
+                <div class="card-info">
+                    <h3>Cool as Folk</h3>
+                    <p>공연 기획 (2025.12)</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        © 2025 KimIntelligence. All rights reserved.
-    </footer>
+    <div id="modal-human" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-human')">×</span>
+            <h2>인간궁상 (Human Gungsang)</h2>
+            <img src="images/poster_human.png" class="modal-img">
+            <div class="modal-text">
+                <p>본인의 깊은 이야기를 하는 것은 어딘가 궁상맞아 보이기도 합니다. 그러나 때로 그 궁상 속에서 비로소 그 사람이 드러나기도 합니다. 자신의 이야기를 하는 세 뮤지션이 모여 다양한 인간군상을 보여주고자 합니다.</p>
+                <ul>
+                    <li>일시: 2025년 11월 7일(금) 오후 8시</li>
+                    <li>장소: 공상온도 (서울 마포구 동교로23길 40)</li>
+                </ul>
+                <p><br><strong>[Live Photo]</strong></p>
+                <img src="images/photo_live.jpg" style="width:100%; margin-top:10px;">
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-cool" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-cool')">×</span>
+            <h2>Cool as Folk</h2>
+            <img src="images/poster_cool.png" class="modal-img">
+            <div class="modal-text">
+                <p>오래된 것은 종종 낡고 뒤처진 것으로 이해되기도 합니다. 하지만 하룻밤만 자고 일어나도 많은 것이 달라져 있는 요즘에는, 오히려 오래된 것이 곧 쿨한 것으로 받아들여질 수 있지 않을까 싶습니다. 마치 아름다운 옛날 포크 음악들 처럼요.</p>
+                <p>각자 표방하는 시대는 다를지라도, 깊이 있고 오래된 사운드를 추구하는 세 뮤지션이 함께 무대에 섭니다.</p>
+                <ul>
+                    <li>일시: 2025년 12월 13일 (토) 오후 6시</li>
+                    <li>장소: 스튜디오 산보 (용산구 서빙고로79가길 32)</li>
+                    <li>라인업: 규리, 집단지성, 원호</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2025 KimIntelligence. All rights reserved.</footer>
+    <script src="script.js"></script>
 </body>
 </html>
