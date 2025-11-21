@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KimIntelligence | ABOUT</title>
+    <title>KimIntelligence | MUSIC</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,40 +13,75 @@
             <h1>KimIntelligence</h1>
         </div>
         <nav>
-            <a href="index.html" class="active">ABOUT & CONTACT</a>
-            <a href="music.html">MUSIC</a>
+            <a href="index.html">ABOUT & CONTACT</a>
+            <a href="music.html" class="active">MUSIC</a>
             <a href="editorial.html">EDITORIAL & PRESS</a>
             <a href="live.html">LIVE PROJECT</a>
         </nav>
     </header>
 
     <main class="container">
-        <section class="about-text">
-            <p>
-                김지성 (KimIntelligence)은 음악과 텍스트 등 다양한 매체로 세계를 이해하고 기록하고자 합니다.
-            </p>
-            <p>
-                그의 원맨밴드 프로젝트 <strong>‘집단지성’</strong>을 통해 특정한 음악적 스타일을 고수하기보다는, 다양한 장르를 자신의 방식으로 재해석하여 각 곡들이 유기적인 흐름을 지닌 하나의 스토리로 만드는 것에 집중하고 있습니다. 그 이야기들은 냉소적으로 보일 수 있지만, 그 바탕에는 언제나 휴머니즘에 대한 믿음이 깔려 있습니다. 이 냉소는 단순한 비판을 넘어서, 인간 본질과 사회적 모순을 조명하고, 이를 통해 더 나은 세상에 대한 희망과 이해를 전달하고자 합니다.
-            </p>
-            <p>
-                2023년 1인 출판사 <strong>'인텔리(Intelli)'</strong>를 설립하여 &lt;13인의 인디사람들&gt;을 기획하고 발간했습니다. 이후 집단지성의 2집인 &lt;홀로 남은&gt; 프로젝트에서는 앨범의 서사를 소설로 확장하며, 음악만으로 담을 수 없는 심리적 깊이를 텍스트로 완성하는 통합적 방법론을 확립했습니다.
-            </p>
-            <p>
-                또한, '아톰뮤직하트 3집 작업기' 편집과 &lt;인간궁상&gt;, &lt;Cool as Folk&gt; 등의 공연 기획 이력을 통해, 콘텐츠를 구조화하고 공간을 설계하는 기획자이자 편집자로서의 경험도 갖추고 있습니다.
-            </p>
-        </section>
+        <div class="grid">
+            <div class="card" onclick="openModal('modal-holo')">
+                <img src="images/album_holo.jpg" alt="홀로 남은 앨범커버">
+                <div class="card-info">
+                    <h3>홀로 남은 (All by myself)</h3>
+                    <p>집단지성 2집 (2025)</p>
+                </div>
+            </div>
 
-        <div class="divider"></div>
-
-        <section class="contact-info">
-            <h3>Contact</h3>
-            <p><a href="https://www.instagram.com/kim_intelligence/" target="_blank">Instagram: @kim_intelligence</a></p>
-            <p><a href="mailto:dave8855@naver.com">E-mail: dave8855@naver.com</a></p>
-        </section>
+            <div class="card" onclick="openModal('modal-guwon')">
+                <img src="images/album_guwonmong.jpg" alt="구원몽 앨범커버">
+                <div class="card-info">
+                    <h3>구원몽 (A Dream Of Salvation)</h3>
+                    <p>집단지성 1집 (2024)</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <footer>
-        &copy; 2025 KimIntelligence. All rights reserved.
-    </footer>
+    <div id="modal-holo" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-holo')">×</span>
+            <h2>홀로 남은 (집단지성 2집)</h2>
+            <img src="images/album_holo.jpg" class="modal-img">
+            
+            <div class="modal-text">
+                <p><strong>[앨범 소개]</strong></p>
+                <p>혹자는 말하기도 합니다. 불완전한 진실보다는 정교한 거짓을 보여주고 싶다고. 저는 이 앨범을 정반대의 태도로 접근했습니다. 거칠더라도 최대한 진실에 가까운 것을 담아보고 싶었습니다. 그래서 가상악기 사용을 지양하고 모든 파트의 연주와 녹음, 믹스와 마스터링까지 직접 진행했습니다.</p>
+                <p>가상악기와 AI의 발전으로 음악산업의 진입장벽이 어느 때 보다도 낮은 시대에 이는 어쩌면 시간적, 결과물적 측면에서 미련한 일일지도 모릅니다. 하지만 제가 좋아하고 추구하는 음악들이 대부분 실제 연주를 녹음한 방식으로 만들어졌음에도 편하다는 이유로 다른 방법을 선택하고 싶지 않았습니다. 서툶까지도 제 몫으로 남겨두고 싶었습니다. 그것은 결국 제가 불완전한 존재라는 사실을 인정하는 일이기도 했고, 이 태도는 앨범이 말하고자 하는 바와 맞닿아 있습니다.</p>
+                <p>이 앨범은 결국 사랑에 대해 말하고 있습니다. 우리는 종종 서로의 부족함을 받아들이고 껴안는 일을 가장 어려워하는 존재처럼 보이기도 합니다. 그렇게 요즘 우리의 사회는 혐오와 불신으로 쉽게 갈라집니다. 설령 이를 해결할 메시아가 다시 온다 해도 우리는 그마저 의심하고, 끝내 거부할지도 모릅니다. 그렇다면 불완전한 채로 남겨진 우리는 어떻게 살아가야 하는가. 이 질문이 이번 작업의 바탕이 되었습니다.</p>
+                <p>앨범이 담고 있는 이야기를 더 깊이 전하고 싶어, 피지컬 CD를 만드는 대신 동명의 소설을 출간했습니다. 음악과 소설을 함께 감상하시기를 권합니다.</p>
+                
+                <div class="credit-box">
+                    <p><strong>[Credit]</strong></p>
+                    <p>작사, 작곡, 편곡: 김지성<br>드럼, 베이스, 기타, 보컬: 김지성<br>녹음, 믹스, 마스터링: 김지성<br><br>Everything by Kimintelligence</p>
+                </div>
+                
+                <a href="https://open.spotify.com/album/5MrPurYN9AthQHFiZNBqjE?si=FGM9ub6RRQGZyP_f1O-zOA" target="_blank" class="btn">Spotify Listen</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-guwon" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-guwon')">×</span>
+            <h2>구원몽 (집단지성 1집)</h2>
+            <img src="images/album_guwonmong.jpg" class="modal-img">
+            
+            <div class="modal-text">
+                <p><strong>[앨범 소개]</strong></p>
+                <p>녹천에는 똥이 많다. 그와 함께 읽었던 책이다... (중략: 조도영 수필가 서문) ...결국, <구원몽>은 각 곡들의 유기적 흐름을 통해 하나의 스토리를 구성하는 김지성의 개인적인 작품이면서, 동시에 세계와 자신의 관계를 탐색하는 고전적 예술가들의 물음을 계승한 작품이다. - 조도영(수필가)</p>
+                <div class="credit-box">
+                    <p><strong>[Credit]</strong></p>
+                    <p>작사, 작곡, 편곡: 김지성<br>Guitar, Bass, Vocal, Tambourine: 김지성<br>Drum: 전지환<br>녹음, 믹스, 마스터: 김지성</p>
+                </div>
+                <a href="https://open.spotify.com/album/1WTPDC0SKn7pz9mxQwTcra?si=SzFCTq0jRJKJQbdqI2ZIvw" target="_blank" class="btn">Spotify Listen</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>© 2025 KimIntelligence. All rights reserved.</footer>
+    <script src="script.js"></script>
 </body>
 </html>
