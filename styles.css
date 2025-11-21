@@ -62,15 +62,15 @@ nav a:hover, nav a.active {
 
 /* 4. Layout & Section Titles */
 .container {
-    max-width: 950px;
+    max-width: 900px; /* 리스트형에 맞게 폭 조정 */
     margin: 0 auto;
-    padding: 100px 5%; 
+    padding: 80px 5%; 
 }
 
 .section-title {
     font-family: 'Noto Serif KR', serif; 
     font-size: 2.2rem; 
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     text-align: left; 
     letter-spacing: 1px;
     padding-left: 0; 
@@ -98,19 +98,52 @@ nav a:hover, nav a.active {
 .info-details a { text-decoration: underline; text-underline-offset: 4px; color: #007bff; }
 
 
-/* ★★★ 6. Grid System (수정됨: 강제 가로 2열 배치) ★★★ */
+/* ★★★ 6. Grid System (가로형 리스트 디자인) ★★★ */
 .grid { 
     display: grid; 
-    /* 무조건 1:1 비율로 2개를 나란히 배치 */
-    grid-template-columns: 1fr 1fr; 
-    gap: 40px; 
+    grid-template-columns: 1fr; /* 무조건 1열 (세로로 쌓임) */
+    gap: 40px; /* 카드 간 간격 */
 }
-.card { cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-.card img { height: 350px; border: 1px solid #eee; width: 100%; object-fit: cover; }
-.card-info { padding: 25px 0; text-align: left; }
-.card-info h3 { margin: 0 0 8px; font-size: 1.3rem; font-weight: 600; }
-.card-info p { color: #777; margin:0; }
+
+.card { 
+    display: flex; /* 이미지와 글을 옆으로 배치 */
+    flex-direction: row; /* 가로 방향 */
+    align-items: center; /* 수직 중앙 정렬 */
+    background: #fff;
+    cursor: pointer; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 250px; /* 카드 높이 고정 (깔끔하게) */
+}
+
+.card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+
+.card img { 
+    width: 40%; /* 이미지가 왼쪽 40% 차지 */
+    height: 100%; 
+    object-fit: cover; 
+    border-right: 1px solid #eee; /* 이미지와 글 사이 경계선 */
+    border-bottom: none; /* 기존 하단 선 제거 */
+}
+
+.card-info { 
+    width: 60%; /* 글 공간 60% 차지 */
+    padding: 0 30px; 
+    text-align: left; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info h3 { 
+    margin: 0 0 10px; 
+    font-size: 1.4rem; 
+    font-weight: 700; 
+    font-family: 'Noto Serif KR', serif;
+}
+.card-info p { color: #666; margin:0; font-size: 0.95rem; }
 
 
 /* 7. Modal (Popup) */
@@ -201,7 +234,7 @@ nav a:hover, nav a.active {
 .copyright { margin-top: 20px; font-size: 0.8rem; color: #aaa; }
 
 
-/* 8. Footer (페이지 하단) */
+/* 8. Footer */
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -211,7 +244,6 @@ footer {
     background-color: #fcfcfc;
     margin-top: 50px;
 }
-
 .footer-content { margin: 0 auto; max-width: 800px; }
 .footer-links { margin-bottom: 10px; font-size: 0.9rem; font-weight: 500; }
 .footer-links a { color: #555; margin: 0 8px; }
@@ -220,23 +252,31 @@ footer {
 .copyright { margin-top: 10px; font-size: 0.8rem; }
 
 
-/* 9. Mobile Responsive (모바일에서는 1열로 변경) */
+/* 9. Mobile Responsive */
 @media (max-width: 768px) {
-    header { padding: 30px 5% 30px; } 
-    
-    nav a { padding: 5px 10px; font-size: 0.8rem; margin: 0 5px; }
-    
+    header { padding: 30px 5% 20px; } 
+    nav a { padding: 5px 8px; font-size: 0.8rem; margin: 0 2px; }
     .container { padding: 40px 5%; }
     .profile-image-section img { max-width: 80%; }
     
-    /* 모바일에서는 1줄(세로)로 변경 */
-    .grid { grid-template-columns: 1fr; gap: 40px; }
-    .card img { height: auto; max-height: 300px; }
+    /* 모바일에서도 '가로형 리스트' 유지하되 비율 조정 */
+    .card { 
+        height: auto; /* 높이 자동 (글 내용에 맞춤) */
+        min-height: 150px;
+    }
+    .card img { 
+        width: 35%; /* 이미지 비율 축소 */
+    }
+    .card-info { 
+        width: 65%; 
+        padding: 20px; 
+    }
+    .card-info h3 { font-size: 1.1rem; }
+    .card-info p { font-size: 0.85rem; }
     
     .footer-links { display: flex; flex-direction: column; gap: 5px; }
     .footer-links .separator { display: none; }
 
-    /* 모달 최적화 */
     .modal-content {
         margin: 10% auto;
         padding: 30px 20px;
