@@ -10,15 +10,15 @@ body {
     line-height: 1.7;
     word-break: keep-all; 
     scroll-behavior: smooth; 
-    letter-spacing: 0.5px; /* 넓은 자간 */
+    letter-spacing: 0.5px; 
 }
 
 a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
 a:hover { opacity: 0.6; }
-ul { list-style: none; }
+ul { list-style: none; padding: 0; margin: 0; }
 img { max-width: 100%; display: block; }
 
-/* 2. Header */
+/* 2. Brand Header */
 header {
     padding: 60px 5% 40px; 
     background-color: #fff;
@@ -27,18 +27,25 @@ header {
 }
 
 .logo-area { margin-bottom: 40px; }
-.logo-area img { height: 60px; width: auto; object-fit: contain; margin: 0 auto; }
+
+.logo-area img {
+    width: 150px; 
+    height: auto;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.15); 
+}
 
 /* 3. Navigation */
-nav { display: flex; justify-content: center; padding: 10px 0; }
+nav { margin-top: 0; display: flex; justify-content: center; padding: 10px 0; }
 
 nav a {
     font-family: 'Noto Sans KR', sans-serif; 
     font-size: 0.95rem;
     color: #333;
     padding: 5px 20px; 
-    margin: 0 10px;
-    border-bottom: none; /* 밑줄 제거 */
+    margin: 0 10px; 
+    border-bottom: none; 
     transition: color 0.3s;
     letter-spacing: 0.8px;
     font-weight: 500;
@@ -50,20 +57,12 @@ nav a:hover, nav a.active {
     background-color: #f7f7f7;
 }
 
-/* 4. Layout */
+/* 4. Layout & Section Titles */
 .container {
     max-width: 950px;
     margin: 0 auto;
     padding: 100px 5%; 
 }
-
-.page-title {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    line-height: 1.2;
-}
-.page-title span { font-size: 1.2rem; font-weight: 400; color: #666; }
 
 .section-title {
     font-family: 'Noto Serif KR', serif; 
@@ -71,6 +70,7 @@ nav a:hover, nav a.active {
     margin-bottom: 70px;
     text-align: left; 
     letter-spacing: 1px;
+    padding-left: 0; 
 }
 
 /* 5. About Page Specific */
@@ -80,113 +80,66 @@ nav a:hover, nav a.active {
 .about-text { max-width: 700px; margin: 0 auto; text-align: left; }
 .about-text p { margin-bottom: 25px; font-size: 1.05rem; }
 
-.divider { width: 100%; height: 1px; background: #eee; margin: 80px 0; }
-
-.contact-info { text-align: left; max-width: 700px; margin: 0 auto; }
-.contact-info h3 { font-family: 'Noto Serif KR', serif; font-size: 1.5rem; margin-bottom: 30px; }
-.info-details p { margin-bottom: 10px; font-size: 1rem; }
-.info-details a { text-decoration: underline; text-underline-offset: 4px; }
-
 /* 6. Grid System (Cards) */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 60px; /* 카드 간격 넓힘 */
+    gap: 60px;
 }
-
-.card {
-    background: #fff;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-}
+.card { transition: transform 0.3s, box-shadow 0.3s; }
 .card img {
     width: 100%;
-    height: 350px; /* 이미지 높이 통일 */
+    height: 350px; 
     object-fit: cover;
     border: 1px solid #eee;
 }
 .card-info { padding: 25px 0; text-align: left; }
 .card-info h3 { margin: 0 0 8px; font-size: 1.3rem; font-weight: 600; }
-.card-info p { margin: 0; color: #777; font-size: 0.95rem; }
 
-/* 7. Modal (Popup) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(255, 255, 255, 0.95); /* 배경 흰색 불투명 */
-    backdrop-filter: blur(5px);
-}
-.modal-content {
-    background-color: #fff;
-    margin: 5% auto;
-    padding: 60px 40px;
-    width: 90%;
-    max-width: 700px;
-    position: relative;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-}
-.close {
-    color: #333;
-    float: right;
-    font-size: 40px;
-    font-weight: lighter;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-}
-.close:hover { color: #000; }
-.modal-img {
-    max-width: 350px;
-    margin: 0 auto 40px;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
-}
-.modal-text h2 { text-align: center; font-family: 'Noto Serif KR', serif; margin-bottom: 40px; font-size: 1.8rem;}
-.modal-text p { margin-bottom: 20px; line-height: 1.8; font-size: 1rem; }
-.credit-box {
-    background: #f9f9f9;
-    padding: 30px;
-    margin: 40px 0;
-    font-size: 0.9rem;
-    color: #555;
-    border-radius: 5px;
-}
-.btn {
-    display: block;
-    width: 100%;
-    padding: 18px;
-    background: #111;
-    color: #fff;
-    text-align: center;
-    margin-top: 40px;
-    transition: background 0.3s;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-.btn:hover { background: #333; opacity: 1; }
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 60px 20px;
-    color: #999;
-    font-size: 0.85rem;
-    border-top: 1px solid #eee;
+/* 7. Contact Section */
+.profile-details-block { 
+    margin: 30px auto 30px; max-width: 450px; text-align: left; line-height: 2.0; 
+    border: 1px solid #ddd; padding: 30px; border-radius: 5px; background-color: #fbfbfb;
 }
 
+/* 8. Mobile Responsive (최적화 확장) */
 @media (max-width: 768px) {
-    header { padding: 40px 20px; }
-    .menu { flex-direction: column; align-items: center; gap: 15px; }
-    .grid { grid-template-columns: 1fr; }
-    .card img { height: auto; }
+    /* 전체 여백 조정 */
+    .container { padding: 40px 5%; }
+    .section-title { font-size: 1.8rem; text-align: center; margin-bottom: 40px; }
+    
+    /* 헤더 및 로고 */
+    header { padding: 40px 5% 20px; }
+    .logo-area img { max-width: 100px; }
+    
+    /* 네비게이션: 세로로 정렬되도록 변경 */
+    nav { padding: 10px 0; }
+    nav a { 
+        padding: 5px 10px;
+        font-size: 0.8rem; 
+        margin: 0 5px;
+    }
+    
+    /* 메인 이미지 크기 조정 */
+    .profile-image-section img { max-width: 80%; }
+
+    /* 카드: 2열 -> 1열로 변경 */
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .card img {
+        height: 250px;
+    }
+    .card-info h3 { font-size: 1.2rem; }
+}
+
+@media (max-width: 480px) {
+    /* 아주 작은 화면에서 네비게이션 메뉴를 한 줄에 담기 어렵다면 중앙 정렬로 변경 */
+    nav { 
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    nav a { margin: 0 5px; }
 }
