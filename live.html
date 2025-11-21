@@ -1,95 +1,83 @@
-/* 1. Global Reset & Font */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600&family=Noto+Serif+KR:wght@400;600&display=swap');
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KimIntelligence | LIVE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="images/logo.png" alt="KimIntelligence Logo">
+        </div>
+        <nav>
+            <a href="index.html">ABOUT & CONTACT</a>
+            <a href="music.html">MUSIC</a>
+            <a href="editorial.html">EDITORIAL & PRESS</a>
+            <a href="live.html" class="active">LIVE PROJECT</a>
+        </nav>
+    </header>
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+    <main class="container">
+        <h2 class="section-title">Live Projects</h2>
+        <div class="grid">
+            <div class="card" onclick="openModal('modal-human')">
+                <img src="images/poster_human.png" alt="인간궁상 포스터">
+                <div class="card-info">
+                    <h3>인간궁상 (Human Gungsang)</h3>
+                    <p>공연 기획 (2025.11)</p>
+                </div>
+            </div>
 
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #1a1a1a;
-    background-color: #fff;
-    line-height: 1.7;
-    word-break: keep-all; 
-    scroll-behavior: smooth;
-    /* Apple / Tate Modern Style 적용 */
-    letter-spacing: 0.5px; /* 폰트 자간 확장 */
-}
+            <div class="card" onclick="openModal('modal-cool')">
+                <img src="images/poster_cool.png" alt="Cool as Folk 포스터">
+                <div class="card-info">
+                    <h3>Cool as Folk</h3>
+                    <p>공연 기획 (2025.12)</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
-a:hover { opacity: 0.6; }
-ul { list-style: none; }
-img { max-width: 100%; display: block; }
+    <div id="modal-human" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-human')">×</span>
+            <h2>인간궁상 (Human Gungsang)</h2>
+            <img src="images/poster_human.png" class="modal-img">
+            <div class="modal-text">
+                <p>본인의 깊은 이야기를 하는 것은 어딘가 궁상맞아 보이기도 합니다. 그러나 때로 그 궁상 속에서 비로소 그 사람이 드러나기도 합니다. 자신의 이야기를 하는 세 뮤지션이 모여 다양한 인간군상을 보여주고자 합니다.</p>
+                <ul>
+                    <li>일시: 2025년 11월 7일(금) 오후 8시</li>
+                    <li>장소: 공상온도 (서울 마포구 동교로23길 40)</li>
+                </ul>
+                <p><br><strong>[Live Photo]</strong></p>
+                <img src="images/photo_live.jpg" style="width:100%; margin-top:10px;">
+            </div>
+        </div>
+    </div>
 
-/* 2. Brand Header (로고 & 메뉴) */
-header {
-    padding: 60px 5% 30px; /* 상하 여백 대폭 증가 (Tate Modern) */
-    background-color: #fff;
-    border-bottom: 1px solid rgba(0,0,0,0.05); 
-    text-align: center;
-}
+    <div id="modal-cool" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-cool')">×</span>
+            <h2>Cool as Folk</h2>
+            <img src="images/poster_cool.png" class="modal-img">
+            <div class="modal-text">
+                <p>오래된 것은 종종 낡고 뒤처진 것으로 이해되기도 합니다. 하지만 하룻밤만 자고 일어나도 많은 것이 달라져 있는 요즘에는, 오히려 오래된 것이 곧 쿨한 것으로 받아들여질 수 있지 않을까 싶습니다. 마치 아름다운 옛날 포크 음악들 처럼요.</p>
+                <p>각자 표방하는 시대는 다를지라도, 깊이 있고 오래된 사운드를 추구하는 세 뮤지션이 함께 무대에 섭니다.</p>
+                <ul>
+                    <li>일시: 2025년 12월 13일 (토) 오후 6시</li>
+                    <li>장소: 스튜디오 산보 (용산구 서빙고로79가길 32)</li>
+                    <li>라인업: 규리, 집단지성, 원호</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-.logo-area {
-    margin-bottom: 30px;
-}
-
-.logo-area img {
-    height: 60px; 
-    width: auto;
-    object-fit: contain;
-    margin: 0 auto;
-}
-
-header h1 {
-    display: none; /* 로고 이미지로 대체되었으므로 숨김 */
-}
-
-/* 3. Navigation */
-nav { margin-top: 0; }
-
-.nav-container { display: flex; justify-content: center; }
-
-.menu { display: flex; gap: 50px; /* 메뉴 간격 넓게 (Tate Modern) */ }
-
-nav a {
-    font-family: 'Noto Sans KR', sans-serif; /* 메뉴는 고딕으로 깔끔하게 */
-    font-size: 0.95rem;
-    color: #333;
-    padding: 5px 0;
-    transition: all 0.3s;
-    /* Apple Style: 밑줄 제거 */
-    border-bottom: none !important; 
-}
-
-nav a:hover, nav a.active {
-    color: #000;
-    opacity: 0.8;
-}
-
-/* 4. Layout & Section Titles */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 80px 5%; /* 섹션 상하 여백 충분히 확보 */
-}
-
-.section-title {
-    font-family: 'Noto Serif KR', serif; /* 명조체로 제목의 무게감 부여 */
-    font-size: 2.2rem;
-    margin-bottom: 60px;
-    text-align: center;
-    letter-spacing: 1px; /* 자간 확장 */
-}
-
-/* (이하 스타일은 이전과 동일하게 유지됩니다.) */
-
-/* 5. Footer & Shared Styles */
-/* ... (Contact 및 Footer 스타일 유지) ... */
-
-/* 6. Modal Style (유지) */
-/* ... (Modal 관련 스타일 유지) ... */
-
-@media (max-width: 768px) {
-    .container { padding: 40px 5%; }
-    header { padding: 40px 5% 20px; }
-    .menu { gap: 20px; }
-    .grid { grid-template-columns: 1fr; } 
-}
+    <footer>© 2025 KimIntelligence. All rights reserved.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
