@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KimIntelligence | LIVE</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <div class="logo-area">
+            <a href="index.html"><img src="images/logo.png" alt="KimIntelligence Logo"></a>
+        </div>
         <nav>
             <a href="index.html">ABOUT</a>
             <a href="music.html">MUSIC</a>
@@ -24,15 +24,14 @@
         <p class="section-subtitle">기획 및 출연을 맡은 공연들</p>
         <div class="grid">
             <div class="card" onclick="openModal('modal-human')">
-                <img src="images/poster_human.png" alt="인간궁상 포스터">
+                <img src="images/poster_human.png" alt="인간궁상">
                 <div class="card-info">
                     <h3>인간궁상 (Human Gungsang)</h3>
                     <p>공연 기획 (2025.11)</p>
                 </div>
             </div>
-
             <div class="card" onclick="openModal('modal-cool')">
-                <img src="images/poster_cool.png" alt="Cool as Folk 포스터">
+                <img src="images/poster_cool.png" alt="Cool as Folk">
                 <div class="card-info">
                     <h3>Cool as Folk</h3>
                     <p>공연 기획 (2025.12)</p>
@@ -47,13 +46,22 @@
             <h2>인간궁상 (Human Gungsang)</h2>
             <img src="images/poster_human.png" class="modal-img">
             <div class="modal-text">
-                <p>본인의 깊은 이야기를 하는 것은 어딘가 궁상맞아 보이기도 합니다. 그러나 때로 그 궁상 속에서 비로소 그 사람이 드러나기도 합니다. 자신의 이야기를 하는 세 뮤지션이 모여 다양한 인간군상을 보여주고자 합니다.</p>
+                <p>본인의 깊은 이야기를 하는 것은 어딘가 궁상맞아 보이기도 합니다...</p>
                 <ul>
                     <li>일시: 2025년 11월 7일(금) 오후 8시</li>
                     <li>장소: 공상온도 (서울 마포구 동교로23길 40)</li>
                 </ul>
                 <p><br><strong>[Live Photo]</strong></p>
                 <img src="images/photo_live.jpg" style="width:100%; margin-top:10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            </div>
+            
+            <div class="contact-box">
+                <h3>Contact</h3>
+                <div class="contact-links">
+                    <a href="mailto:dave8855@naver.com">dave8855@naver.com</a> | 
+                    <a href="https://www.instagram.com/kim_intelligence/" target="_blank">Instagram</a>
+                </div>
+                <p class="copyright">© 2025 KimIntelligence. All rights reserved.</p>
             </div>
         </div>
     </div>
@@ -64,31 +72,25 @@
             <h2>Cool as Folk</h2>
             <img src="images/poster_cool.png" class="modal-img">
             <div class="modal-text">
-                <p>오래된 것은 종종 낡고 뒤처진 것으로 이해되기도 합니다. 하지만 하룻밤만 자고 일어나도 많은 것이 달라져 있는 요즘에는, 오히려 오래된 것이 곧 쿨한 것으로 받아들여질 수 있지 않을까 싶습니다. 마치 아름다운 옛날 포크 음악들 처럼요.</p>
-                <p>각자 표방하는 시대는 다를지라도, 깊이 있고 오래된 사운드를 추구하는 세 뮤지션이 함께 무대에 섭니다.</p>
+                <p>오래된 것은 종종 낡고 뒤처진 것으로 이해되기도 합니다...</p>
                 <ul>
                     <li>일시: 2025년 12월 13일 (토) 오후 6시</li>
                     <li>장소: 스튜디오 산보 (용산구 서빙고로79가길 32)</li>
                     <li>라인업: 규리, 집단지성, 원호</li>
                 </ul>
             </div>
+            
+            <div class="contact-box">
+                <h3>Contact</h3>
+                <div class="contact-links">
+                    <a href="mailto:dave8855@naver.com">dave8855@naver.com</a> | 
+                    <a href="https://www.instagram.com/kim_intelligence/" target="_blank">Instagram</a>
+                </div>
+                <p class="copyright">© 2025 KimIntelligence. All rights reserved.</p>
+            </div>
         </div>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="mailto:dave8855@naver.com">Email</a>
-                <span class="separator">|</span>
-                <a href="https://www.instagram.com/kim_intelligence/" target="_blank">Instagram</a>
-                <span class="separator">|</span>
-                <a href="https://www.youtube.com/@KimIntelligence" target="_blank">Youtube</a>
-                <span class="separator">|</span>
-                <a href="https://open.spotify.com/album/1WTPDC0SKn7pz9mxQwTcra?si=SzFCTq0jRJKJQbdqI2ZIvw" target="_blank">Spotify</a>
-            </div>
-            <p class="copyright">© 2025 KimIntelligence. All rights reserved.</p>
-        </div>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
