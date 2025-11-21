@@ -1,108 +1,221 @@
-/* 기본 리셋 및 폰트 */
+/* 1. 기본 설정 및 리셋 */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
-    line-height: 1.6;
+    font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* 배경색: 아주 연한 회색 */
-    color: #333; /* 기본 글자색: 진한 회색 */
+    color: #333;
+    background-color: #fdfdfd; 
+    word-break: keep-all; 
+    scroll-behavior: smooth; 
 }
 
-/* 레이아웃 컨테이너: 중앙 정렬 및 배경 */
-.container {
-    max-width: 900px;
-    margin: 0 auto; /* 중앙 정렬 */
-    padding: 20px;
-    background-color: #fff; /* 콘텐츠 영역 배경색: 흰색 */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* 은은한 그림자 */
-}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; padding: 0; margin: 0; }
+img { max-width: 100%; display: block; }
 
-/* 헤더 및 네비게이션 */
-header {
-    background-color: #007bff; /* 파란색 배경 */
-    color: white;
-    padding: 20px 0;
+
+/* 2. 메인 헤더 (인트로 + 네비게이션) */
+header#intro {
+    padding-top: 50px;
+    padding-bottom: 30px;
     text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #e2e6ea;
-}
-
-/* 섹션 스타일 */
-section {
-    padding: 40px 20px;
-    margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
 }
 
-section h2 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+.intro-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* 소개 텍스트 */
-.intro-text {
-    font-size: 1.1em;
-    line-height: 1.8;
-    margin-bottom: 30px;
+.main-image-logo img {
+    width: 150px; /* 로고 이미지 크기 */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid #333;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* 프로젝트 목록 스타일 */
-.project-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-}
-
-.project-item {
-    border: 1px solid #eee;
-    padding: 20px;
-    border-radius: 5px;
-    transition: box-shadow 0.3s;
-}
-
-.project-item:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.project-item h3 {
-    margin-top: 0;
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 30px;
     color: #333;
 }
 
-.project-item a {
-    display: inline-block;
-    margin-top: 10px;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+/* 3. 네비게이션 바 (메인 메뉴) */
+nav {
+    position: sticky; 
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(3px);
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    padding: 10px 20px;
 }
 
-/* 푸터 */
-footer {
-    background-color: #333;
-    color: white;
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.menu a:hover { 
+    color: #007bff; 
+    border-bottom: 2px solid #007bff;
+}
+
+
+/* 4. 섹션 공통 스타일 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.bg-gray { background-color: #f7f7f7; }
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
     text-align: center;
-    padding: 20px 0;
-    font-size: 0.9em;
+    letter-spacing: -0.5px;
+    color: #333;
 }
 
-footer p {
-    margin: 5px 0;
+.section-subtitle {
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 60px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* 5. 소개 섹션 (About) */
+.profile-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 40px;
+    /* 이미지 대신 텍스트만 보이도록 디자인 */
+    justify-content: center;
+}
+
+.profile-img { display: none; /* 이미지가 상단에 로고로 이동했으므로 숨김 */ }
+
+.profile-text {
+    max-width: 700px; /* 텍스트 너비 조정 */
+}
+
+.profile-text h2 {
+    color: #007bff; 
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.profile-text h3 {
+    font-size: 1.8rem;
+    margin: 0 0 20px;
+}
+
+.main-narrative { font-size: 1.05rem; font-weight: 500; margin-bottom: 20px; }
+
+.philosophy {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+}
+
+/* 6. 작업물 카드 (Grid List) */
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+}
+
+.work-card {
+    /* 기존 스타일 유지 */
+    background: #fff; border: 1px solid #eee; border-radius: 10px; overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column;
+}
+
+.card-image img { 
+    /* 컬러 이미지 유지 */
+    object-fit: cover;
+}
+
+.card-text { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+.links a:hover { background-color: #007bff; }
+
+/* 7. Profile & Contact 섹션 */
+footer#profile {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.footer-content { margin: 0 auto; max-width: 800px; }
+.profile-details {
+    margin: 30px auto 30px;
+    max-width: 400px;
+    text-align: left;
+    line-height: 2.0;
+    border: 1px solid #444;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #333;
+}
+
+.external-links h3 { font-size: 1.2rem; margin-bottom: 15px; color: #007bff; }
+.external-links a { margin: 0 10px; font-weight: 500; transition: color 0.3s; }
+.external-links a:hover { color: #fdfdfd; }
+
+
+/* 8. 모바일 반응형 */
+@media (max-width: 768px) {
+    /* 모바일 헤더 */
+    header#intro { padding: 30px 20px 20px; }
+    .main-image-logo img { width: 100px; height: 100px; }
+    header h1 { font-size: 1.5rem; margin-bottom: 20px; }
+
+    /* 모바일 네비게이션 */
+    .menu { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .nav-container { flex-direction: column; }
+    
+    /* About 섹션 */
+    .profile-wrap { flex-direction: column; gap: 30px; }
+    .profile-img { max-width: 60%; margin: 0 auto; }
+    
+    /* 작업물 카드 1열 */
+    .grid-list { grid-template-columns: 1fr; } 
+    .work-card { flex-direction: column; height: auto; }
+    .card-image { height: 200px; }
+    .card-text { padding: 20px; }
 }
