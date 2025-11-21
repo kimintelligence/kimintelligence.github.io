@@ -1,70 +1,130 @@
-/* 9. Mobile Responsive (모바일 최적화 최종 수정본) */
+/* 1. Global Reset & Font */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600&family=Noto+Serif+KR:wght@400;600&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #1a1a1a;
+    background-color: #fff;
+    line-height: 1.7;
+    word-break: keep-all; 
+    scroll-behavior: smooth; 
+    letter-spacing: 0.5px; 
+}
+
+a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
+a:hover { opacity: 0.6; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* 2. Header & Navigation (수정됨) */
+header {
+    padding: 30px 0;
+    background-color: #fff;
+    /* border-bottom 제거하여 더 깔끔하게 */
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 40px; /* 메뉴 간격 */
+    padding: 0;
+    margin: 0;
+}
+
+.menu li { list-style: none; }
+
+.menu a {
+    font-family: 'Noto Sans KR', sans-serif; 
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase; /* 대문자로 통일 */
+    letter-spacing: 1px;
+}
+
+.menu a.active {
+    color: #000;
+    border-bottom: 2px solid #000; /* 활성 메뉴 밑줄 */
+    padding-bottom: 5px;
+}
+
+/* 3. Main Container */
+.container {
+    max-width: 800px; /* 본문 폭을 좁혀서 집중도 향상 */
+    margin: 0 auto;
+    padding: 60px 20px; 
+}
+
+/* 4. Profile Image (수정됨) */
+.profile-image-section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.profile-image-section img {
+    width: 100%;
+    max-width: 500px; /* 이미지 최대 너비 제한 */
+    height: auto;
+    margin: 0 auto; /* 중앙 정렬 */
+    display: block;
+}
+
+/* 5. Text Styles */
+.artist-name {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.about-text p {
+    margin-bottom: 25px;
+    font-size: 1rem;
+    text-align: left; /* 본문은 왼쪽 정렬 */
+    line-height: 1.8;
+}
+
+.divider { width: 100%; height: 1px; background: #eee; margin: 60px 0; }
+
+/* 6. Contact Info */
+.contact-info { text-align: center; }
+.contact-info h3 { font-family: 'Noto Serif KR', serif; font-size: 1.5rem; margin-bottom: 20px; }
+.info-details p { margin-bottom: 10px; }
+.info-details a { font-weight: bold; text-decoration: underline; }
+
+/* 7. Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+    font-size: 0.8rem;
+    border-top: 1px solid #eee;
+    margin-top: 60px;
+}
+
+/* 8. Grid & Modal (기존 유지) */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.card { cursor: pointer; }
+.card img { width: 100%; height: 350px; object-fit: cover; border: 1px solid #eee; }
+.card-info { padding: 20px 0; }
+.card-info h3 { font-size: 1.2rem; margin-bottom: 5px; }
+.card-info p { color: #777; font-size: 0.9rem; }
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
-    /* 1. 헤더 & 네비게이션 */
-    header { padding: 30px 5% 20px; }
-    .logo-area img { max-width: 120px; } /* 로고 크기 적당히 조절 */
-    
-    nav a { 
-        padding: 5px 12px; 
-        font-size: 0.85rem; 
-        margin: 0 2px; /* 메뉴 간격 좁힘 */
-    }
-    
-    /* 2. 메인 컨텐츠 */
-    .container { padding: 40px 5%; }
-    .section-title { font-size: 1.8rem; margin-bottom: 40px; text-align: center; }
-    .section-subtitle { text-align: center; font-size: 0.9rem; }
-    
-    .profile-image-section img { max-width: 100%; box-shadow: none; }
-    .about-text { text-align: left; word-break: keep-all; }
-    
-    /* 3. 그리드 (카드) - 한 줄로 보기 */
-    .grid { grid-template-columns: 1fr; gap: 40px; }
-    .card img { height: auto; max-height: 300px; object-fit: cover; } /* 이미지 비율 유지 */
-    
-    /* 4. 푸터 */
-    .footer-links { display: flex; flex-direction: column; gap: 10px; }
-    .footer-links .separator { display: none; }
-
-    /* ★★★ 5. 모달 (팝업) 모바일 최적화 핵심 ★★★ */
-    .modal-content {
-        margin: 15% auto; /* 상단 여백 확보 */
-        padding: 30px 20px; /* 내부 여백을 줄여 화면 활용도 높임 */
-        width: 90%; /* 화면 꽉 차게 */
-        max-height: 85vh; /* 너무 길면 스크롤 되게 */
-        overflow-y: auto; /* 내부 스크롤 허용 */
-    }
-
-    .modal-img {
-        width: 100%; /* 이미지를 가로로 꽉 채움 */
-        max-width: 100%; /* PC용 제한(350px) 해제 */
-        height: auto; /* 비율 깨짐 방지 (자동 높이) */
-        margin-bottom: 25px;
-    }
-
-    .modal-text h2 {
-        font-size: 1.5rem; /* 제목 크기 조정 */
-        margin-bottom: 20px;
-        text-align: left; /* 모바일에서는 왼쪽 정렬이 읽기 편함 */
-    }
-
-    .modal-text p {
-        font-size: 0.95rem; /* 본문 글자 크기 가독성 확보 */
-        line-height: 1.6;
-        text-align: justify; /* 양쪽 정렬로 깔끔하게 */
-    }
-
-    .close {
-        top: 10px;
-        right: 15px;
-        font-size: 35px; /* 닫기 버튼 터치하기 쉽게 */
-    }
-    
-    .contact-box h3 { text-align: center; }
-    .contact-links { 
-        display: flex; 
-        flex-direction: column; /* 연락처 세로 정렬 */
-        align-items: center; 
-        gap: 5px; 
-    }
+    .menu { gap: 20px; font-size: 0.8rem; flex-wrap: wrap; justify-content: center; }
+    .artist-name { font-size: 2rem; }
+    .profile-image-section img { max-width: 100%; }
+    .grid { grid-template-columns: 1fr; }
 }
