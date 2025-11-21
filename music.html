@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KimIntelligence | MUSIC</title>
+    <title>KimIntelligence | LIVE</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -13,74 +16,68 @@
         </div>
         <nav>
             <a href="index.html">ABOUT & CONTACT</a>
-            <a href="music.html" class="active">MUSIC</a>
+            <a href="music.html">MUSIC</a>
             <a href="editorial.html">EDITORIAL & PRESS</a>
-            <a href="live.html">LIVE PROJECT</a>
+            <a href="live.html" class="active">LIVE PROJECT</a>
         </nav>
     </header>
 
     <main class="container">
-        <h2 class="section-title">Music Projects</h2>
+        <h2 class="section-title">Live Projects</h2>
         <div class="grid">
-            <div class="card" onclick="openModal('modal-holo')">
-                <img src="images/album_holo.jpg" alt="홀로 남은 앨범커버">
+            <div class="card" onclick="openModal('modal-human')">
+                <img src="images/poster_human.png" alt="인간궁상 포스터">
                 <div class="card-info">
-                    <h3>홀로 남은 (All by myself)</h3>
-                    <p>집단지성 2집 (2025)</p>
+                    <h3>인간궁상 (Human Gungsang)</h3>
+                    <p>공연 기획 (2025.11)</p>
                 </div>
             </div>
 
-            <div class="card" onclick="openModal('modal-guwon')">
-                <img src="images/album_guwonmong.jpg" alt="구원몽 앨범커버">
+            <div class="card" onclick="openModal('modal-cool')">
+                <img src="images/poster_cool.png" alt="Cool as Folk 포스터">
                 <div class="card-info">
-                    <h3>구원몽 (A Dream Of Salvation)</h3>
-                    <p>집단지성 1집 (2024)</p>
+                    <h3>Cool as Folk</h3>
+                    <p>공연 기획 (2025.12)</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <div id="modal-holo" class="modal">
+    <div id="modal-human" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-holo')">×</span>
-            <h2>홀로 남은 (집단지성 2집)</h2>
-            <img src="images/album_holo.jpg" class="modal-img">
-            
+            <span class="close" onclick="closeModal('modal-human')">×</span>
+            <h2>인간궁상 (Human Gungsang)</h2>
+            <img src="images/poster_human.png" class="modal-img">
             <div class="modal-text">
-                <p><strong>[앨범 소개]</strong></p>
-                <p>혹자는 말하기도 합니다. 불완전한 진실보다는 정교한 거짓을 보여주고 싶다고... (중략) ...가상악기와 AI의 발전으로 음악산업의 진입장벽이 어느 때 보다도 낮은 시대에 이는 어쩌면 시간적, 결과물적 측면에서 미련한 일일지도 모릅니다. 하지만 제가 좋아하고 추구하는 음악들이 대부분 실제 연주를 녹음한 방식으로 만들어졌음에도 편하다는 이유로 다른 방법을 선택하고 싶지 않았습니다. 서툶까지도 제 몫으로 남겨두고 싶었습니다.</p>
-                <p>이 앨범은 결국 사랑에 대해 말하고 있습니다. 그렇다면 불완전한 채로 남겨진 우리는 어떻게 살아가야 하는가. 이 질문이 이번 작업의 바탕이 되었습니다. 앨범이 담고 있는 이야기를 더 깊이 전하고 싶어, 피지컬 CD를 만드는 대신 동명의 소설을 출간했습니다. 음악과 소설을 함께 감상하시기를 권합니다.</p>
-                
-                <div class="credit-box">
-                    <p><strong>[Credit]</strong></p>
-                    <p>작사, 작곡, 편곡: 김지성<br>드럼, 베이스, 기타, 보컬, 녹음, 믹스, 마스터링: 김지성<br><br>Everything by Kimintelligence</p>
-                </div>
-                
-                <a href="https://open.spotify.com/album/5MrPurYN9AthQHFiZNBqjE?si=FGM9ub6RRQGZyP_f1O-zOA" target="_blank" class="btn">Spotify Listen</a>
+                <p>본인의 깊은 이야기를 하는 것은 어딘가 궁상맞아 보이기도 합니다. 그러나 때로 그 궁상 속에서 비로소 그 사람이 드러나기도 합니다. 자신의 이야기를 하는 세 뮤지션이 모여 다양한 인간군상을 보여주고자 합니다.</p>
+                <ul>
+                    <li>일시: 2025년 11월 7일(금) 오후 8시</li>
+                    <li>장소: 공상온도 (서울 마포구 동교로23길 40)</li>
+                </ul>
+                <p><br><strong>[Live Photo]</strong></p>
+                <img src="images/photo_live.jpg" style="width:100%; margin-top:10px;">
             </div>
         </div>
     </div>
 
-    <div id="modal-guwon" class="modal">
+    <div id="modal-cool" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-guwon')">×</span>
-            <h2>구원몽 (집단지성 1집)</h2>
-            <img src="images/album_guwonmong.jpg" class="modal-img">
-            
+            <span class="close" onclick="closeModal('modal-cool')">×</span>
+            <h2>Cool as Folk</h2>
+            <img src="images/poster_cool.png" class="modal-img">
             <div class="modal-text">
-                <p><strong>[앨범 소개]</strong></p>
-                <p>녹천에는 똥이 많다... (중략: 조도영 수필가 서문) ...그 속에서 김지성은 스스로를 창작으로 이끌었다. 김지성에게 예술은 이해할 수도, 영향을 미칠 수도 없는 세상 앞에 선 단독자의 독백이었고, 그러한 의미에서 그는 나에게 가장 고전적인 의미에서의 예술가였다. </p>
-                <p><구원몽>은 이러한 불신과 의심의 세계로 뛰어든 청년의 영혼이 향하는 길을 보여준다. 결국, <구원몽>은 각 곡들의 유기적 흐름을 통해 하나의 스토리를 구성하는 김지성의 개인적인 작품이면서, 동시에 세계와 자신의 관계를 탐색하는 고전적 예술가들의 물음을 계승한 작품이다. - 조도영(수필가)</p>
-                <div class="credit-box">
-                    <p><strong>[Credit]</strong></p>
-                    <p>작사, 작곡, 편곡: 김지성<br>Guitar, Bass, Vocal, Tambourine: 김지성<br>Drum: 전지환<br>녹음, 믹스, 마스터: 김지성</p>
-                </div>
-                <a href="https://open.spotify.com/album/1WTPDC0SKn7pz9mxQwTcra?si=SzFCTq0jRJKJQbdqI2ZIvw" target="_blank" class="btn">Spotify Listen</a>
+                <p>오래된 것은 종종 낡고 뒤처진 것으로 이해되기도 합니다. 하지만 하룻밤만 자고 일어나도 많은 것이 달라져 있는 요즘에는, 오히려 오래된 것이 곧 쿨한 것으로 받아들여질 수 있지 않을까 싶습니다. 마치 아름다운 옛날 포크 음악들 처럼요.</p>
+                <p>각자 표방하는 시대는 다를지라도, 깊이 있고 오래된 사운드를 추구하는 세 뮤지션이 함께 무대에 섭니다.</p>
+                <ul>
+                    <li>일시: 2025년 12월 13일 (토) 오후 6시</li>
+                    <li>장소: 스튜디오 산보 (용산구 서빙고로79가길 32)</li>
+                    <li>라인업: 규리, 집단지성, 원호</li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <footer>© 2025 KimIntelligence.</footer>
+    <footer>© 2025 KimIntelligence. All rights reserved.</footer>
     <script src="script.js"></script>
 </body>
 </html>
