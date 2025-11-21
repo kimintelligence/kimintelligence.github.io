@@ -3,76 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KimIntelligence | LIVE</title>
+    <title>KimIntelligence | MUSIC</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="logo-area">
-            <img src="images/logo.png" alt="KimIntelligence Logo">
+            <a href="index.html"><img src="images/logo.png" alt="KimIntelligence Logo"></a>
         </div>
         <nav>
             <a href="index.html">ABOUT & CONTACT</a>
-            <a href="music.html">MUSIC</a>
+            <a href="music.html" class="active">MUSIC</a>
             <a href="editorial.html">EDITORIAL & PRESS</a>
-            <a href="live.html" class="active">LIVE PROJECT</a>
+            <a href="live.html">LIVE PROJECT</a>
         </nav>
     </header>
 
     <main class="container">
-        <h2 class="section-title">Live Projects</h2>
+        <h2 class="section-title">Music & Narrative</h2>
         <div class="grid">
-            <div class="card" onclick="openModal('modal-human')">
-                <img src="images/poster_human.png" alt="인간궁상 포스터">
+            <div class="card" onclick="openModal('modal-holo')">
+                <img src="images/album_holo.jpg" alt="홀로 남은 앨범커버">
                 <div class="card-info">
-                    <h3>인간궁상 (Human Gungsang)</h3>
-                    <p>공연 기획 (2025.11)</p>
+                    <h3>홀로 남은 (All by myself)</h3>
+                    <p>집단지성 2집 (2025)</p>
                 </div>
             </div>
 
-            <div class="card" onclick="openModal('modal-cool')">
-                <img src="images/poster_cool.png" alt="Cool as Folk 포스터">
+            <div class="card" onclick="openModal('modal-guwon')">
+                <img src="images/album_guwonmong.jpg" alt="구원몽 앨범커버">
                 <div class="card-info">
-                    <h3>Cool as Folk</h3>
-                    <p>공연 기획 (2025.12)</p>
+                    <h3>구원몽 (A Dream Of Salvation)</h3>
+                    <p>집단지성 1집 (2024)</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <div id="modal-human" class="modal">
+    <div id="modal-holo" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-human')">×</span>
-            <h2>인간궁상 (Human Gungsang)</h2>
-            <img src="images/poster_human.png" class="modal-img">
+            <span class="close" onclick="closeModal('modal-holo')">×</span>
+            <h2>홀로 남은 (집단지성 2집)</h2>
+            <img src="images/album_holo.jpg" class="modal-img">
+            
             <div class="modal-text">
-                <p>본인의 깊은 이야기를 하는 것은 어딘가 궁상맞아 보이기도 합니다. 그러나 때로 그 궁상 속에서 비로소 그 사람이 드러나기도 합니다. 자신의 이야기를 하는 세 뮤지션이 모여 다양한 인간군상을 보여주고자 합니다.</p>
-                <ul>
-                    <li>일시: 2025년 11월 7일(금) 오후 8시</li>
-                    <li>장소: 공상온도 (서울 마포구 동교로23길 40)</li>
-                </ul>
-                <p><br><strong>[Live Photo]</strong></p>
-                <img src="images/photo_live.jpg" style="width:100%; margin-top:10px;">
+                <p><strong>[앨범 소개]</strong></p>
+                <p>혹자는 말하기도 합니다. 불완전한 진실보다는 정교한 거짓을 보여주고 싶다고. 저는 이 앨범을 정반대의 태도로 접근했습니다. 거칠더라도 최대한 진실에 가까운 것을 담아보고 싶었습니다. 그래서 가상악기 사용을 지양하고 모든 파트의 연주와 녹음, 믹스와 마스터링까지 직접 진행했습니다.</p>
+                <p>가상악기와 AI의 발전으로 음악산업의 진입장벽이 어느 때 보다도 낮은 시대에 이는 어쩌면 시간적, 결과물적 측면에서 미련한 일일지도 모릅니다. 하지만 제가 좋아하고 추구하는 음악들이 대부분 실제 연주를 녹음한 방식으로 만들어졌음에도 편하다는 이유로 다른 방법을 선택하고 싶지 않았습니다. 서툶까지도 제 몫으로 남겨두고 싶었습니다. 그것은 결국 제가 불완전한 존재라는 사실을 인정하는 일이기도 했고, 이 태도는 앨범이 말하고자 하는 바와 맞닿아 있습니다.</p>
+                <p>이 앨범은 결국 사랑에 대해 말하고 있습니다. 우리는 종종 서로의 부족함을 받아들이고 껴안는 일을 가장 어려워하는 존재처럼 보이기도 합니다. 그렇게 요즘 우리의 사회는 혐오와 불신으로 쉽게 갈라집니다. 설령 이를 해결할 메시아가 다시 온다 해도 우리는 그마저 의심하고, 끝내 거부할지도 모릅니다. 그렇다면 불완전한 채로 남겨진 우리는 어떻게 살아가야 하는가. 이 질문이 이번 작업의 바탕이 되었습니다.</p>
+                <p>앨범이 담고 있는 이야기를 더 깊이 전하고 싶어, 피지컬 CD를 만드는 대신 동명의 소설을 출간했습니다. 음악과 소설을 함께 감상하시기를 권합니다.</p>
+                
+                <div class="credit-box">
+                    <p><strong>[Credit]</strong></p>
+                    <p>작사, 작곡, 편곡: 김지성<br>드럼, 베이스, 기타, 보컬: 김지성<br>녹음, 믹스, 마스터링: 김지성<br><br>Everything by Kimintelligence</p>
+                </div>
+                
+                <a href="https://open.spotify.com/album/5MrPurYN9AthQHFiZNBqjE?si=FGM9ub6RRQGZyP_f1O-zOA" target="_blank" class="btn">Spotify Listen</a>
             </div>
         </div>
     </div>
 
-    <div id="modal-cool" class="modal">
+    <div id="modal-guwon" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal('modal-cool')">×</span>
-            <h2>Cool as Folk</h2>
-            <img src="images/poster_cool.png" class="modal-img">
+            <span class="close" onclick="closeModal('modal-guwon')">×</span>
+            <h2>구원몽 (집단지성 1집)</h2>
+            <img src="images/album_guwonmong.jpg" class="modal-img">
+            
             <div class="modal-text">
-                <p>오래된 것은 종종 낡고 뒤처진 것으로 이해되기도 합니다. 하지만 하룻밤만 자고 일어나도 많은 것이 달라져 있는 요즘에는, 오히려 오래된 것이 곧 쿨한 것으로 받아들여질 수 있지 않을까 싶습니다. 마치 아름다운 옛날 포크 음악들 처럼요.</p>
-                <p>각자 표방하는 시대는 다를지라도, 깊이 있고 오래된 사운드를 추구하는 세 뮤지션이 함께 무대에 섭니다.</p>
-                <ul>
-                    <li>일시: 2025년 12월 13일 (토) 오후 6시</li>
-                    <li>장소: 스튜디오 산보 (용산구 서빙고로79가길 32)</li>
-                    <li>라인업: 규리, 집단지성, 원호</li>
-                </ul>
+                <p><strong>[앨범 소개]</strong></p>
+                <p>녹천에는 똥이 많다. 그와 함께 읽었던 책이다. 우리는 무엇이 그리도 웃긴 지 하루 온종일 제목을 뇌까리며 웃었었다. 이끼로 가득한 녹천의 썩은 내와 그 모든 상황을 비웃는 것처럼 덩그러니 놓인 똥. 우리에게 재미있는 것이라고는 이런 것뿐이었다. 그때 우리에게 세상은 불가해했다. 열정적인 혁명가의 구호, 보통 사람들의 생활방식, 그리고 사랑하는 사람의 마음까지도. 이해할 수 있고 더 나아가 익숙하다고 여기던 모든 것들이 사실은 사기, 위선 혹은 스스로마저 속여버린 현란한 거짓말이라는 인식이 우리를 지배했었다. 그 속에서 김지성은 스스로를 창작으로 이끌었다. 김지성에게 예술은 이해할 수도, 영향을 미칠 수도 없는 세상 앞에 선 단독자의 독백이었고, 그러한 의미에서 그는 나에게 가장 고전적인 의미에서의 예술가였다.</p>
+                <p>집단지성의 &lt;구원몽&gt;은 이러한 고전적 예술가의 고뇌가 청년의 목소리를 빌려 탄생한 작품이다... (중략) ...&lt;구원몽&gt;은 각 곡들의 유기적 흐름을 통해 하나의 스토리를 구성하는 김지성의 개인적인 작품이면서, 동시에 세계와 자신의 관계를 탐색하는 고전적 예술가들의 물음을 계승한 작품이다. - 조도영(수필가)</p>
+                <div class="credit-box">
+                    <p><strong>[Credit]</strong></p>
+                    <p>작사, 작곡, 편곡: 김지성<br>Guitar, Bass, Vocal, Tambourine: 김지성<br>Drum: 전지환<br>녹음, 믹스, 마스터: 김지성</p>
+                </div>
+                <a href="https://open.spotify.com/album/1WTPDC0SKn7pz9mxQwTcra?si=SzFCTq0jRJKJQbdqI2ZIvw" target="_blank" class="btn">Spotify Listen</a>
             </div>
         </div>
     </div>
