@@ -11,9 +11,6 @@
 </head>
 <body>
     <header>
-        <div class="logo-area">
-            <a href="index.html"><img src="images/logo.png" alt="KimIntelligence Logo"></a>
-        </div>
         <nav>
             <a href="index.html">ABOUT</a>
             <a href="music.html">MUSIC</a>
@@ -24,6 +21,7 @@
 
     <main class="container">
         <h2 class="section-title">Live Projects</h2>
+        <p class="section-subtitle">기획 및 출연을 맡은 공연들</p>
         <div class="grid">
             <div class="card" onclick="openModal('modal-human')">
                 <img src="images/poster_human.png" alt="인간궁상 포스터">
@@ -41,16 +39,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="divider"></div>
-
-        <section class="contact-info">
-            <h3>Contact</h3>
-            <div class="info-details">
-                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/kim_intelligence/" target="_blank">@kim_intelligence</a></p>
-                <p><strong>E-mail:</strong> <a href="mailto:dave8855@naver.com">dave8855@naver.com</a></p>
-            </div>
-        </section>
     </main>
 
     <div id="modal-human" class="modal">
@@ -65,7 +53,7 @@
                     <li>장소: 공상온도 (서울 마포구 동교로23길 40)</li>
                 </ul>
                 <p><br><strong>[Live Photo]</strong></p>
-                <img src="images/photo_live.jpg" style="width:100%; margin-top:10px;">
+                <img src="images/photo_live.jpg" style="width:100%; margin-top:10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
             </div>
         </div>
     </div>
@@ -87,7 +75,20 @@
         </div>
     </div>
 
-    <footer>© 2025 KimIntelligence. All rights reserved.</footer>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="mailto:dave8855@naver.com">Email</a>
+                <span class="separator">|</span>
+                <a href="https://www.instagram.com/kim_intelligence/" target="_blank">Instagram</a>
+                <span class="separator">|</span>
+                <a href="https://www.youtube.com/@KimIntelligence" target="_blank">Youtube</a>
+                <span class="separator">|</span>
+                <a href="https://open.spotify.com/album/1WTPDC0SKn7pz9mxQwTcra?si=SzFCTq0jRJKJQbdqI2ZIvw" target="_blank">Spotify</a>
+            </div>
+            <p class="copyright">© 2025 KimIntelligence. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
