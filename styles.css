@@ -1,277 +1,187 @@
-/* 1. Global Reset & Font (전문적인 느낌 강화) */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;700&display=swap');
+/* 1. Global Reset & Font (고딕체 통일) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&display=swap');
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
-    color: #222; /* 진한 회색으로 가독성 높임 */
+    font-family: 'Noto Sans KR', sans-serif; /* 명조체 제거, 고딕 통일 */
+    color: #1a1a1a;
     background-color: #fff;
-    line-height: 1.75; /* 줄 간격 넓혀서 여유 있게 */
-    word-break: keep-all;
-    -webkit-font-smoothing: antialiased; /* 폰트 부드럽게 */
+    line-height: 1.7;
+    word-break: keep-all; 
+    scroll-behavior: smooth; 
+    letter-spacing: -0.02em; /* 자간을 살짝 좁혀서 단단한 느낌 */
 }
 
-a { text-decoration: none; color: inherit; transition: all 0.3s; }
+a { text-decoration: none; color: inherit; transition: opacity 0.3s; }
+a:hover { opacity: 0.6; }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
 
-
-/* 2. Header (메뉴바) - 깔끔하고 모던하게 */
+/* 2. Header */
 header {
-    padding: 20px 0; /* 상하 여백 축소 */
-    background-color: rgba(255, 255, 255, 0.95); /* 반투명 배경 */
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 40px 5% 30px; 
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.05); 
+    text-align: center;
 }
 
-nav { display: flex; justify-content: center; }
+.logo-area { margin-bottom: 40px; }
+.logo-area img { width: 120px; height: auto; margin: 0 auto; }
 
+/* 3. Navigation */
+nav { margin-top: 0; display: flex; justify-content: center; padding: 0; }
 nav a {
-    font-family: 'Noto Sans KR', sans-serif;
     font-size: 0.9rem;
+    color: #333;
+    padding: 5px 20px; 
+    margin: 0 5px; 
     font-weight: 600;
-    color: #555;
-    padding: 10px 20px;
-    margin: 0 5px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
-
-nav a:hover, nav a.active {
-    color: #000;
-    font-weight: 700;
-}
+nav a:hover, nav a.active { color: #000; opacity: 0.6; }
 
 
-/* 3. Layout Container */
+/* 4. Layout & Section Titles */
 .container {
-    max-width: 800px; /* 본문 집중도 향상 */
+    max-width: 800px;
     margin: 0 auto;
-    padding: 60px 20px 120px; /* 하단 여백 충분히 */
+    padding: 80px 5%; 
 }
 
-
-/* 4. Titles & Subtitles (위계 질서 명확히) */
-.page-title {
-    font-family: 'Noto Serif KR', serif; /* 명조체로 품격 있게 */
-    font-size: 2.4rem;
-    font-weight: 700;
-    text-align: left;
-    margin-bottom: 10px;
+.section-title {
+    font-size: 2.4rem; /* 폰트 크기 키움 */
+    font-weight: 700; /* 굵게 */
+    margin-bottom: 60px;
+    text-align: left; 
     letter-spacing: -0.5px;
     color: #111;
 }
 
-.section-title {
-    font-family: 'Noto Serif KR', serif;
+.section-subtitle { 
+    text-align: left; 
+    margin-top: -50px; /* 제목과 가깝게 */
+    margin-bottom: 60px;
+    color: #666;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* 5. About Page Specific (간격 조정) */
+.profile-image-section { 
+    margin-bottom: 20px; /* [수정] 사진 아래 여백 대폭 축소 */
+}
+.profile-image-section img { width: 100%; max-width: 500px; margin: 0 auto; display: block; }
+
+.about-text { max-width: 700px; margin: 0 auto; text-align: left; }
+
+.page-title {
     font-size: 2.2rem;
     font-weight: 700;
-    margin-bottom: 10px;
-    color: #111;
+    margin-top: 0; /* [수정] 위쪽 여백 제거 */
+    margin-bottom: 30px; /* 본문과의 간격 */
+    text-align: left; /* 왼쪽 정렬 */
+    line-height: 1.2;
 }
 
-.section-subtitle {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 60px; /* 제목과 본문 사이 간격 벌림 */
-    font-weight: 400;
-}
+.main-narrative { font-size: 1.1rem; font-weight: 500; margin-bottom: 25px; line-height: 1.8; }
+.about-text p { margin-bottom: 20px; font-size: 1rem; color: #333; }
+.divider { width: 100%; height: 1px; background: #eee; margin: 80px 0; }
+
+/* Contact Info */
+.contact-info { text-align: left; max-width: 700px; margin: 0 auto; }
+.contact-info h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; }
+.info-details p { margin-bottom: 10px; font-size: 1rem; }
+.info-details a { text-decoration: underline; text-underline-offset: 4px; color: #000; font-weight: bold; }
 
 
-/* 5. About Page (프로필 + 텍스트 정렬) */
-.profile-image-section {
-    margin-bottom: 40px;
-}
-.profile-image-section img {
-    width: 100%;
-    border-radius: 0; /* 직각 유지 */
+/* ★★★ 6. Grid System (모바일 상하 배치로 변경) ★★★ */
+.grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* PC: 2열 */
+    gap: 40px; 
 }
 
-.about-text {
-    margin-top: 40px; /* 사진과 텍스트 사이 간격 */
-}
-.main-narrative {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #333;
-    margin-bottom: 30px;
-    line-height: 1.8;
-}
-.about-text p { margin-bottom: 20px; color: #555; }
-
-
-/* 6. Contact Info */
-.contact-info {
-    margin-top: 80px;
-    padding-top: 40px;
-    border-top: 1px solid #eee;
-}
-.contact-info h3 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-}
-.info-details p { margin-bottom: 8px; font-size: 0.95rem; }
-.info-details a { font-weight: 600; border-bottom: 1px solid #ccc; }
-
-
-/* ★★★ 7. Card List (상업적 퀄리티 핵심) ★★★ */
-.grid {
-    display: flex;
-    flex-direction: column;
-    gap: 30px; /* 카드 사이 간격 */
-}
-
-.card {
-    display: flex !important;
-    flex-direction: row !important;
-    height: 220px; /* 높이 고정 */
+.card { 
+    display: flex; 
+    flex-direction: column; /* [수정] 이미지 위, 글 아래 (상하 배치) */
     background: #fff;
-    cursor: pointer;
-    border-radius: 8px; /* 둥근 모서리 */
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06); /* 고급스러운 그림자 */
-    transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden;
-    border: 1px solid rgba(0,0,0,0.05); /* 아주 연한 테두리 */
+    cursor: pointer; 
+    transition: transform 0.3s; 
+    border: none; /* 테두리 제거하고 깔끔하게 */
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-}
+.card:hover { transform: translateY(-5px); }
 
 .card-image {
-    width: 35% !important;
-    height: 100%;
-    flex-shrink: 0;
+    width: 100%; 
+    height: auto; /* 높이 자동 */
+    margin-bottom: 15px; /* [수정] 이미지와 텍스트 사이 간격 확보 */
+    overflow: hidden;
+    border-radius: 8px; /* 이미지 둥근 모서리 */
 }
 
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.card-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border: 1px solid #eee; /* 이미지에만 얇은 테두리 */
+    transition: transform 0.3s;
+}
+.card:hover img { transform: scale(1.03); } /* 호버 시 이미지 살짝 확대 */
+
+.card-text { 
+    width: 100%; 
+    padding: 0; /* 패딩 제거 (이미지와 정렬 맞춤) */
+    text-align: left; 
 }
 
-.card-text {
-    width: 65% !important;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.card-text h3 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 1.4rem;
-    margin-bottom: 8px;
+.card-text h3 { 
+    margin: 0 0 8px; 
+    font-size: 1.3rem; 
+    font-weight: 700; 
     color: #111;
-    font-weight: 700;
 }
-
-.card-text p {
-    font-size: 0.9rem;
-    color: #777;
-    margin: 0;
-    font-weight: 400;
-}
+.card-text p { color: #666; margin:0; font-size: 0.95rem; }
 
 
-/* 8. Modal (Popup) - 깔끔하게 */
-.modal {
-    display: none !important; 
-    position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%;
-    background-color: rgba(255,255,255,0.95); /* 배경 거의 불투명 */
-    overflow-y: auto;
-}
-.modal[style*="display: block"] { display: block !important; }
+/* 7. Modal (Popup) */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(5px); }
+.modal-content { background-color: #fff; margin: 5% auto; padding: 60px 40px; border: 1px solid #ddd; max-width: 800px; width: 90%; position: relative; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+.close { color: #333; position: absolute; top: 20px; right: 25px; font-size: 35px; cursor: pointer; }
+.modal-img { width: 100%; max-width: 350px; margin: 0 auto 40px; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-radius: 5px; }
+.modal-text h2 { font-size: 1.8rem; margin-bottom: 30px; font-weight: 700; text-align: center; }
+.modal-text p { margin-bottom: 15px; font-size: 1rem; line-height: 1.8; }
+.credit-box { background-color: #f9f9f9; padding: 25px; border-radius: 8px; margin: 40px 0; font-size: 0.9rem; }
+.btn { display: block; width: 100%; padding: 18px; background: #111; color: #fff; text-align: center; margin-top: 40px; font-weight: 600; border-radius: 8px; }
+.contact-box { margin-top: 60px; padding-top: 30px; border-top: 1px solid #eee; text-align: center; }
+.contact-links a { margin: 0 10px; font-weight: 600; text-decoration: underline; color: #000; }
+.copyright { margin-top: 20px; font-size: 0.8rem; color: #aaa; }
 
-.modal-content {
-    background-color: transparent; /* 배경 투명 */
-    margin: 50px auto;
-    padding: 0 20px 60px;
-    width: 100%;
-    max-width: 700px;
-    box-shadow: none; /* 그림자 제거 */
-    border: none;
-}
-
-.close {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    font-size: 50px;
-    font-weight: 100;
-    color: #111;
-    cursor: pointer;
-    z-index: 2100;
-}
-
-.modal-img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-.modal-text h2 {
-    font-family: 'Noto Serif KR', serif;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    text-align: center;
-}
-.modal-text p { margin-bottom: 20px; font-size: 1rem; line-height: 1.8; }
-
-.btn {
-    display: block; width: 100%; padding: 16px;
-    background: #111; color: #fff !important;
-    text-align: center; margin-top: 50px;
-    font-weight: 600; border-radius: 4px;
-}
-
-/* 모달 내부 Contact */
-.contact-box {
-    margin-top: 60px; padding-top: 40px;
-    border-top: 1px solid #eee; text-align: center;
-}
-.contact-box h3 { font-family: 'Noto Serif KR', serif; font-size: 1.2rem; margin-bottom: 15px; }
-.contact-links a { margin: 0 10px; font-weight: 600; border-bottom: 1px solid #ccc; color: #111; }
+/* 8. Footer */
+footer { text-align: center; padding: 60px 20px; font-size: 0.85rem; color: #999; border-top: 1px solid #eee; margin-top: 80px; }
+.footer-links a { color: #555; margin: 0 10px; font-weight: 500; }
+.footer-links a:hover { color: #000; }
 
 
-/* 9. Footer */
-footer {
-    text-align: center; padding: 40px 20px; font-size: 0.8rem; color: #bbb;
-    margin-top: 0; /* 컨테이너 패딩으로 대체 */
-}
-
-
-/* ★★★ Mobile Responsive ★★★ */
+/* 9. Mobile Responsive */
 @media (max-width: 768px) {
-    /* 헤더 */
-    header { padding: 15px 0; }
-    nav { flex-wrap: wrap; gap: 5px; }
-    nav a { padding: 5px 10px; font-size: 0.8rem; margin: 0; }
-
-    /* 본문 */
+    header { padding: 20px 5% 10px; } 
+    .logo-area { margin-bottom: 20px; }
+    nav a { padding: 5px 8px; font-size: 0.8rem; margin: 0 2px; }
+    
     .container { padding: 40px 5%; }
     
-    /* About */
-    .page-title { font-size: 2rem; margin-bottom: 20px; }
-    .profile-image-section { margin-bottom: 30px; }
-    .about-text { margin-top: 20px; }
-
-    /* 카드 리스트 (모바일에서도 가로 유지하되 비율 조정) */
-    .card { height: 140px; }
-    .card-image { width: 35% !important; }
-    .card-text { width: 65% !important; padding: 15px; }
-    .card-text h3 { font-size: 1.1rem; margin-bottom: 5px; }
-    .card-text p { font-size: 0.8rem; }
-
-    /* 모달 */
-    .modal-content { margin: 0; padding: 80px 20px 40px; }
-    .close { top: 10px; right: 20px; font-size: 40px; }
+    /* About 페이지 모바일 최적화 */
+    .profile-image-section { margin-bottom: 15px; } /* 사진 아래 간격 더 좁힘 */
+    .page-title { font-size: 1.8rem; margin-bottom: 20px; text-align: center; } /* 모바일은 중앙 정렬 */
+    .about-text { text-align: left; } /* 본문은 왼쪽 정렬 유지 */
+    
+    /* 카드 리스트: 1열로 변경 (이미지 위, 글 아래) */
+    .grid { 
+        grid-template-columns: 1fr; /* 1줄 */
+        gap: 50px; /* 카드 간 간격 넓힘 */
+    }
+    .card-image img { height: auto; max-height: none; } /* 이미지 원본 비율 */
+    
+    .modal-content { margin: 0; width: 100%; height: 100%; border-radius: 0; padding: 80px 20px 40px; overflow-y: auto; }
 }
