@@ -25,6 +25,14 @@
         <h2 class="section-title">Music & Narrative</h2>
         
         <div class="grid">
+            <div class="card" onclick="openModal('modal-pipelips')">
+                <img src="images/album_pipelips.png" alt="Fable for Nobody 앨범커버">
+                <div class="card-info">
+                    <h3>Fable for Nobody</h3>
+                    <p>파이프립스 1집</p>
+                </div>
+            </div>
+
             <div class="card" onclick="openModal('modal-holo')">
                 <img src="images/album_holo.jpg" alt="홀로 남은 앨범커버">
                 <div class="card-info">
@@ -52,6 +60,46 @@
             </div>
         </section>
     </main>
+
+    <div id="modal-pipelips" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal-pipelips')">×</span>
+            <h2>Fable for Nobody (파이프립스 1집)</h2>
+            <img src="images/album_pipelips.png" class="modal-img">
+            <div class="modal-text">
+                <p><strong>[앨범 소개]</strong></p>
+                <p>
+                    공연장을 나선 한 사람의 이야기.<br>
+                    10개의 트랙은 그가 마주한 시간들을 순서대로 따라간다.<br>
+                    영화 제목으로 구성된 서사형 컨셉 앨범으로, 하나의 흐름 안에서 감정과 장면이 이어진다.<br>
+                    파이프립스는 이 앨범을 통해, 말 없는 청춘의 방황을 기록했다.
+                </p>
+                <p>
+                    "영화에 대한 애정이 돋보이는 무비-비디오테이프 로큰롤. 개인적 감상으로는 영화관에서 시청한다기보다는, 브라운관 TV에 오래된 해적판 비디오를 넣어 돌린 듯한 느낌이다. 한 트랙 한 트랙 직선적인 듯하면서도 후반으로 가며 묘하게 구불구불 꼬이더니, 최후반에선 비디오 테이프들이 유기적으로 서로 엉겨 붙어 특이한 맛을 낸다. 국제 합작, 치직치직지직…"<br>
+                    - 김기민(꼬리물기/PCR)
+                </p>
+                <p>
+                    "Raw. Ragged. High-energy. But also thoughtfully contained and controlled. A solidly put together album and a refreshing take on 2020s garage, with splashes of 90s indie nostalgia, psychedelia and noise blended in. Each track title references a film (presumably that the artists relate to), add-ing another personal layer that expands the listening experience. A real fun album to listen to. Don't miss it!"<br>
+                    - 제임스(히피토끼)
+                </p>
+                
+                <div class="credit-box">
+                    <p><strong>[Credit]</strong></p>
+                    <p><strong>Artist:</strong> 파이프립스 (PIPE LIPS)</p>
+                    <p>전지환 (Drums)<br>박근하 (Guitar, Vocal)<br>김지성 (Bass)</p>
+                    <p>Produced / Lyrics / Composed / Recorded by 파이프립스</p>
+                </div>
+                <a href="https://open.spotify.com/album/6KiUZ4DCSnnjqRRxJ93cDw?si=5173UDyIRXC79aOQCzoMlA" target="_blank" class="btn">Spotify Listen</a>
+            </div>
+            <div class="contact-box">
+                <h3>Contact</h3>
+                <div class="contact-links">
+                    <a href="mailto:dave8855@naver.com">dave8855@naver.com</a> | 
+                    <a href="https://www.instagram.com/kim_intelligence/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="modal-holo" class="modal">
         <div class="modal-content">
@@ -88,7 +136,7 @@
             <img src="images/album_guwonmong.jpg" class="modal-img">
             <div class="modal-text">
                 <p><strong>[앨범 소개]</strong></p>
-                녹천에는 똥이 많다. 그와 함께 읽었던 책이다. 우리는 무엇이 그리도 웃긴 지 하루 온종일 제목을 뇌까리며 웃었었다. 이끼로 가득한 녹천의 썩은 내와 그 모든 상황을 비웃는 것처럼 덩그러니 놓인 똥. 우리에게 재미있는 것이라고는 이런 것뿐이었다. 그때 우리에게 세상은 불가해했다. 열정적인 혁명가의 구호, 보통 사람들의 생활방식, 그리고 사랑하는 사람의 마음까지도. 이해할 수 있고 더 나아가 익숙하다고 여기던 모든 것들이 사실은 사기, 위선 혹은 스스로마저 속여버린 현란한 거짓말이라는 인식이 우리를 지배했었다. 그 속에서 김지성은 스스로를 창작으로 이끌었다. 김지성에게 예술은 이해할 수도, 영향을 미칠 수도 없는 세상 앞에 선 단독자의 독백이었고, 그러한 의미에서 그는 나에게 가장 고전적인 의미에서의 예술가였다.<br><br>
+                <p>녹천에는 똥이 많다. 그와 함께 읽었던 책이다. 우리는 무엇이 그리도 웃긴 지 하루 온종일 제목을 뇌까리며 웃었었다. 이끼로 가득한 녹천의 썩은 내와 그 모든 상황을 비웃는 것처럼 덩그러니 놓인 똥. 우리에게 재미있는 것이라고는 이런 것뿐이었다. 그때 우리에게 세상은 불가해했다. 열정적인 혁명가의 구호, 보통 사람들의 생활방식, 그리고 사랑하는 사람의 마음까지도. 이해할 수 있고 더 나아가 익숙하다고 여기던 모든 것들이 사실은 사기, 위선 혹은 스스로마저 속여버린 현란한 거짓말이라는 인식이 우리를 지배했었다. 그 속에서 김지성은 스스로를 창작으로 이끌었다. 김지성에게 예술은 이해할 수도, 영향을 미칠 수도 없는 세상 앞에 선 단독자의 독백이었고, 그러한 의미에서 그는 나에게 가장 고전적인 의미에서의 예술가였다.<br><br>
 
                     집단지성의 <구원몽>은 이러한 고전적 예술가의 고뇌가 청년의 목소리를 빌려 탄생한 작품이다. 김지성은 이번 앨범의 데모를 소개하며 스스로의 중학교 시절을 ‘사회주의자’로 묘사했었다. 세계에 대한 불만과 그 대안에 대한 믿음은 현대에도 20세기에도 많은 청년들의 희망이자 열정의 원동력이다. 그러나 지금 우리의 시대는 믿음이 사라진 시대다. 여기서 양당의 극단적 대립이나, 소득의 양극화 같은 거대한 담론을 끌어올 필요는 없다. 우리가 스스로의 삶을 돌아보기만 하더라도 현세대 청년들을 가로지르는 정서는 어른에 대한 불신과 미래에 대한 비관이다. 어른들이 표방하는 정의나 명예, 혹은 ‘어른스러움’이 한낱 돈놀음에 불과하거나, 그들의 자존감을 위한 가면무도회라는 사실, 그리고 계속 더워지는 여름처럼 이미 엉망진창인 지금의 세계가 남은 세계 중 가장 최선의 세계라는 사실이 청년들의 무의식에 드리워져 있다.<br><br>
 
