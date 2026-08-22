@@ -9,15 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* 추가된 스트리밍 버튼 스타일 (필요에 따라 styles.css로 이동시켜 사용하세요) */
+        /* 추가 및 수정된 버튼 스타일 */
         .btn-container {
-            text-align: center;
-            margin: 30px 0 20px 0;
+            display: flex;
+            flex-direction: column; /* 버튼을 세로로 배치 */
+            align-items: center;
+            gap: 15px; /* 버튼 사이의 간격 */
+            margin: 30px 0 30px 0;
         }
-        .btn-streaming {
+        .btn-action {
             display: inline-block;
-            background-color: #000; /* 눈에 띄는 배경색 */
-            color: #fff; /* 글자색 */
+            background-color: #000;
+            color: #fff;
             text-decoration: none;
             padding: 15px 30px;
             font-size: 1.1rem;
@@ -25,10 +28,19 @@
             border-radius: 5px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease, transform 0.2s ease;
+            min-width: 280px; /* 두 버튼의 길이를 비슷하게 맞춤 */
+            text-align: center;
         }
-        .btn-streaming:hover {
+        .btn-action:hover {
             background-color: #333;
             transform: translateY(-2px);
+        }
+        /* 다운로드 버튼 색상을 살짝 다르게 하여 구분 (원하지 않으시면 이 부분 삭제 가능) */
+        .btn-download {
+            background-color: #444; 
+        }
+        .btn-download:hover {
+            background-color: #666;
         }
     </style>
 </head>
@@ -44,9 +56,10 @@
     </header>
 
     <main class="container">
-        <!-- 사운드클라우드 링크가 적용된 스트리밍 버튼 영역 -->
+        <!-- 스트리밍 및 다운로드 버튼 영역 -->
         <div class="btn-container">
-            <a href="https://soundcloud.com/dave-kim-21/sets/3a1/s-m6MFqSd2ady?si=92f7ba7623b64a1ebbf5f7709f119ac3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="btn-streaming" target="_blank">3집 ‘3의 기록’ 스트리밍</a>
+            <a href="https://soundcloud.com/dave-kim-21/sets/3a1/s-m6MFqSd2ady?si=92f7ba7623b64a1ebbf5f7709f119ac3&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="btn-action" target="_blank">3집 ‘3의 기록’ 스트리밍</a>
+            <a href="https://drive.google.com/file/d/131woaUMyjYCYb4uLaO1ppku5LZiv-Vp-/view?usp=drive_link" class="btn-action btn-download" target="_blank">음원 다운로드</a>
         </div>
 
         <div class="profile-image-section">
